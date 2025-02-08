@@ -1,2 +1,0 @@
-# My-Django-Website
-django
