@@ -7,5 +7,6 @@ urlpatterns = [
     path('register/', views.register_page, name="register"),
 
     path('', views.home, name="home"),
+    path('about_me/', views.about_me, name="about_me"),
     path('room/<str:pk>/', views.room, name="room")
 ]

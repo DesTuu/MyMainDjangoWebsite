@@ -1,0 +1,51 @@
+body {
+    background: linear-gradient(white 30%, blue);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 10px 10px;
+    box-sizing: border-box;
+}
+
+.my-logo {
+    width: 200px;
+    height: 100px;
+}
+
+.div-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    right: 20px;
+    top: 10px;
+}
+
+.navbar-button {
+    background: linear-gradient(135deg, #4CAF50, #81C784);
+    border: none;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    width: 120px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+

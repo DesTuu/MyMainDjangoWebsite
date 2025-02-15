@@ -76,3 +76,6 @@ def room(request, pk):
             room = i
     context = {'room': room}
     return render(request, 'my_app/room.html', context)
+
+def about_me(request):
+    return render(request, 'my_app/about_me.html')

@@ -1,11 +1,14 @@
 {% load static %}
 
-<a href='/'>
-    <h1>
-        LOGO
-        <img src="{% static 'images/my_logo.png' %}" width= "300px" height="100px" alt="LOGO">
-        LOGO
-    </h1>
-</a>
-
+<div class="navbar-container">
+    <div class="div-logo">
+        <a href="/">
+            <img class="my-logo" src="{% static 'images/my_logo.png' %}" alt="my-logo">
+        </a>
+    </div>
+    <div class="div-buttons">
+        <button class="navbar-button">Sign up</button>
+        <button class="navbar-button">Sign in</button>
+    </div>
+</div>
 <hr>

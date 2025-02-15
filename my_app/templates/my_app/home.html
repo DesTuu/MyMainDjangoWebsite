@@ -1,16 +1,19 @@
 {% extends 'main.html' %}
 
 {% block content %}
-
-<h1>Home Template</h1>
-
+<div class="main-text italic">
+    <h1>Home Template</h1>
+</div>
 <div>
-    <div>
+    <div class="rooms">
         {% for room in rooms %}
-        <div>
-            <h5>{{room.id}} -- <a href="/room/{{room.id}}">{{room.name}}</a></h5>
-        </div>
+        <ul>
+            <li>{{room.id}} -- <a href="/room/{{room.id}}">{{room.name}}</a></li>
+        </ul>
         {% endfor %}
+        <div class="about_me">
+            <a href="/about_me">About me</a>
+        </div>
     </div>
 </div>
 
