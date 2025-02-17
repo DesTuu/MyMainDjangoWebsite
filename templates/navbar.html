@@ -7,8 +7,14 @@
         </a>
     </div>
     <div class="div-buttons">
-        <button class="navbar-button">Sign up</button>
-        <button class="navbar-button">Sign in</button>
+        {% if request.user.is_authenticated %}
+        <button class="navbar-button">Mój Profil</button>
+        <button class="navbar-button">Ustawienia</button>
+        <button class="navbar-button" onclick="window.location.href='{% url 'logout' %}'">Wylogowanie</button>
+        {% else %}
+        <button class="navbar-button" onclick="window.location.href='{% url 'register' %}'">Rejestracja</button>
+        <button class="navbar-button" onclick="window.location.href='{% url 'login' %}'">Logowanie</button>
+        {% endif %}
     </div>
 </div>
 <hr>

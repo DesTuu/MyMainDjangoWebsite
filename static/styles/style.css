@@ -1,6 +1,7 @@
+/* ===== navbar.html ===== */
+
 body {
-    background: linear-gradient(white 30%, blue);
-    margin: 0;
+    background: #2b2b2b;
     padding: 0;
 }
 
@@ -13,39 +14,106 @@ body {
 }
 
 .my-logo {
-    width: 200px;
-    height: 100px;
-}
-
-.div-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    right: 20px;
-    top: 10px;
+    width: 120px;
+    height: 50px;
 }
 
 .navbar-button {
-    background: linear-gradient(135deg, #4CAF50, #81C784);
-    border: none;
+    background: linear-gradient(135deg, #0056b3, #004080);
+    border: 0px;
     color: white;
     border-radius: 25px;
     padding: 10px 20px;
     width: 120px;
     font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-button:active {
     transform: translateY(0);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* ===== login_register.html ===== */
+
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: #2b2b2b;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    background: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background: #4a4a4a;
+    border: 1px solid #5a5a5a;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: #0056b3;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+    margin: 10px 0px 0px;
+}
+
+.submit-btn:hover {
+    background: #004080;
+}
+
+.toggle-text {
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+}
+
+.toggle-text a {
+    color: #66aaff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.toggle-text a:hover {
+    color: #3399ff;
+}

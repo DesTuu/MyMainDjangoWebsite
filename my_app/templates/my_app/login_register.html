@@ -2,36 +2,66 @@
 
 {% block content %}
 
+<div class="auth-wrapper">
+    <div class="auth-container">
+        {% if page == 'login' %}
+        <div class="form-box">
+            <h2>Login</h2>
+            <form method="POST" action="">
+                {% csrf_token %}
 
-{% if page == 'login' %}
-<div>
-    <form method="POST" action="">
-        {% csrf_token %}
+                <div class="input-group">
+                    <label>Nazwa Użytkownika:</label>
+                    <input type="text" name="Nazwa Użytkownika" placeholder="Użytkownik" required />
+                </div>
 
-        <label>Username:</label>
-        <input type="text" name="username" placeholder="Enter Username" />
+                <div class="input-group">
+                    <label>Hasło:</label>
+                    <input type="password" name="Hasło" placeholder="Hasło" required />
+                </div>
 
-        <label>Password:</label>
-        <input type="password" name="password" placeholder="Enter Password" />
+                <button type="submit" class="submit-btn">Zaloguj się</button>
+            </form>
 
-        <input type="submit" value="Login" />
-    </form>
 
-    <p>haven't signed up yet?</p>
-    <a href="{% url 'register' %}">Sign up</a>
+            <p class="toggle-text">Jeszcze się nie rejestrowałeś/aś?
+                <a href="{% url 'register' %}">Zarejestruj się!</a>
+            </p>
+        </div>
+        {% else %}
+        <div class="form-box">
+            <h2>Rejestracja</h2>
+            <form method="POST" action="">
+                {% csrf_token %}
+
+                <div class="input-group">
+                    <label>Nazwa Użytkownika:</label>
+                    <input type="text" name="Nazwa Użytkownika" placeholder="Użytkownik" required />
+                </div>
+
+                <div class="input-group">
+                    <label>E-Mail:</label>
+                    <input type="email" name="E-Mail" placeholder="E-Mail" required />
+                </div>
+
+                <div class="input-group">
+                    <label>Hasło:</label>
+                    <input type="password" name="Hasło" placeholder="Hasło" required />
+                </div>
+
+                <div class="input-group">
+                    <label>Powtórz Hasło:</label>
+                    <input type="password" name="Powtórz Hasło" placeholder="Powtórz Hasło" required />
+                </div>
+
+                <button type="submit" class="submit-btn">Zarejestruj się</button>
+            </form>
+            <p class="toggle-text">Rejestrowałeś/aś się już wcześniej?
+                <a href="{% url 'login' %}">Zaloguj się!</a>
+            </p>
+        </div>
+        {% endif %}
+    </div>
 </div>
-
-{% else %}
-
-<div>
-    <form method="POST" action="">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Register" />
-    </form>
-    <p>Already signed up yet?</p>
-    <a href="{% url 'login' %}">Login</a>
-</div>
-{% endif %}
 
 {% endblock content %}
