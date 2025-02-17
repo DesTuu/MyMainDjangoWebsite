@@ -1,20 +1,27 @@
 {% extends 'main.html' %}
 
 {% block content %}
-<div class="main-text italic">
-    <h1>Home Template</h1>
-</div>
-<div>
-    <div class="rooms">
-        {% for room in rooms %}
-        <ul>
-            <li>{{room.id}} -- <a href="/room/{{room.id}}">{{room.name}}</a></li>
-        </ul>
-        {% endfor %}
-        <div class="about_me">
-            <a href="/about_me">About me</a>
-        </div>
+
+<div class="home-wrapper">
+    <img class="github-image" src="https://avatars.githubusercontent.com/u/119752905?s=400&u=86f60c9cb9705a35256de8fae9239bd5334d3bfb&v=4" alt="Niebieski Awatar">
+    <h1> Patryk "DesTu" </h1>
+    <h2> <a href="https://github.com/DesTuu?tab=repositories">Sprawdź mojego GitHuba</a></h2>
+    <div class="description">
+        <h3>
+            Cześć! Jestem programistą Pythona, pasjonuję się tą technologią od 2022 roku.<br>
+            Nieustannie rozwijam swoje umiejętności i zdobywam wiedzę poprzez kursy, głównie na YouTube.<br>
+            Wykonuję zlecenia programistyczne, zawsze starając się dostarczyć najwyższą jakość i zadowolenie klienta.<br><br>
+
+            Moje główne obszary specjalizacji to:
+            <ul>
+                <li>Automatyczne zbieranie danych z internetu (web scraping)</li>
+                <li>Tworzenie botów Discordowych</li>
+                <li>Projektowanie stron internetowych</li>
+                <li>Budowanie aplikacji GUI (z graficznym interfejsem użytkownika)</li>
+            </ul>
+        </h3>
     </div>
 </div>
+
 
 {% endblock content %}
